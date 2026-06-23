@@ -6,9 +6,17 @@ This repository hosts the public artifact for the ICSE 2027 submission:
 
 DART studies whether SWE agents can resolve design issues admitted in source-code comments. This repository provides the benchmark construction prompts, construction/evaluation code, example benchmark instances, and sampled agent artifacts. Additional benchmark and evaluation artifacts will be added in subsequent releases.
 
+<p align="center">
+  <img src="figures/2_bench_construction.png" alt="DART benchmark construction workflow" width="100%">
+</p>
+
 ## Contents
 
 ```text
+figures/
+  2_bench_construction.pdf
+  2_bench_construction.png
+
 construction_pipeline/
   prompts/
     task1_gold_patch_isolation.md
