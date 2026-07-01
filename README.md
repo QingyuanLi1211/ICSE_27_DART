@@ -1,13 +1,13 @@
-# DART
+# SWE-design
 
 This repository hosts the public artifact for the ICSE 2027 submission:
 
-**DART: Can SWE Agents Resolve Design Issues Admitted in Source-Code Comments?**
+**SWE-design: Evaluating SWE Agents for Resolving Design Issues Admitted in Code Comments**
 
-DART studies whether SWE agents can resolve design issues admitted in source-code comments. This repository provides the benchmark construction prompts, construction/evaluation code, example benchmark instances, and sampled agent artifacts. Additional benchmark and evaluation artifacts will be added in subsequent releases.
+SWE-design studies whether SWE agents can resolve design issues admitted in source-code comments. This repository provides the benchmark construction prompts, construction/evaluation code, example benchmark instances, and sampled agent artifacts. Additional benchmark and evaluation artifacts will be added in subsequent releases.
 
 <p align="center">
-  <img src="figures/2_bench_construction.png" alt="DART benchmark construction workflow" width="100%">
+  <img src="figures/2_bench_construction.png" alt="SWE-design benchmark construction workflow" width="100%">
 </p>
 
 ## Contents
@@ -47,7 +47,7 @@ agent_patches_trajectory_examples/
 
 ### Benchmark Construction
 
-`construction_pipeline/` contains the LLM-assisted construction pipeline used to build DART instances.
+`construction_pipeline/` contains the LLM-assisted construction pipeline used to build SWE-design instances.
 
 - `prompts/` contains the four construction prompts:
   1. isolate the design-issue-related gold patch from the full developer patch;
@@ -58,20 +58,20 @@ agent_patches_trajectory_examples/
 - `src/` contains the deterministic orchestration code for running the construction steps.
 - `docs/` and `examples/` provide auxiliary construction contracts and example input format.
 
-The example inputs in this repository are sufficient for inspecting the DART instance schema and construction pipeline interface.
+The example inputs in this repository are sufficient for inspecting the SWE-design instance schema and construction pipeline interface.
 
 ### Agent Execution and Evaluation
 
-`src/` contains the code for running SWE agents, collecting submitted patches, and evaluating those patches in DART environments.
+`src/` contains the code for running SWE agents, collecting submitted patches, and evaluating those patches in SWE-design environments.
 
 - `empirical_agents/` contains wrappers for the evaluated agent families.
-- `eval/` contains evaluation entry points for applying agent patches and running DART tests.
+- `eval/` contains evaluation entry points for applying agent patches and running SWE-design tests.
 - `utils/` contains shared code for benchmark loading, Docker execution, output layout, patch handling, and trajectory processing.
 
 Typical entry points are:
 
 ```powershell
-# Run an agent on one or more DART-style JSONL files.
+# Run an agent on one or more SWE-design-style JSONL files.
 python src\empirical_agents\<agent_name>\<agent_name>.py --jsonl-list benchmark_examples\<example>.jsonl
 
 # Evaluate a submitted patch.
@@ -82,7 +82,7 @@ The public example JSONL files are intended to document the instance schema. The
 
 ### Benchmark Examples
 
-`benchmark_examples/` contains one example instance per repository. These examples make the DART instance schema inspectable and provide lightweight inputs for exercising the evaluation harness.
+`benchmark_examples/` contains one example instance per repository. These examples make the SWE-design instance schema inspectable and provide lightweight inputs for exercising the evaluation harness.
 
 ### Agent Artifact Examples
 
@@ -100,6 +100,6 @@ The complete `output_data_batch` artifacts are large and will be distributed thr
 
 Future releases will include:
 
-- the full verified DART benchmark;
+- the full verified SWE-design benchmark;
 - Docker image bundles required for reproducible execution;
 - complete agent trajectories, patches, logs, and evaluation outputs.
