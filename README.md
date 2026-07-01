@@ -7,7 +7,7 @@ This repository hosts the public artifact for the ICSE 2027 submission:
 SWE-design studies whether SWE agents can resolve design issues admitted in source-code comments. This repository provides the benchmark construction prompts, construction/evaluation code, example benchmark instances, and sampled agent artifacts. Additional benchmark and evaluation artifacts will be added in subsequent releases.
 
 <p align="center">
-  <img src="figures/2_bench_construction.png" alt="SWE-design benchmark construction workflow" width="100%">
+  <img src="figures/2_bench_construction.png?raw=1&v=20260701-c884c49" alt="SWE-design benchmark construction workflow" width="100%">
 </p>
 
 ## Contents
